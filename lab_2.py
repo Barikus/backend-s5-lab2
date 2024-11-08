@@ -1,3 +1,4 @@
+"""Программа, выводящая количество простых чисел в диапозоне."""
 def is_prime(num):
     """Проверяет, является ли число простым."""
     if num <= 1:
@@ -22,14 +23,11 @@ def main():
     try:
         start = int(input("Введите начало диапазона: "))
         end = int(input("Введите конец диапазона: "))
-    
         if start > end:
             print("Ошибка: начало диапазона больше конца.")
             return
-    
         prime_numbers_count = count_primes(start, end)
         print(f"Количество простых чисел в диапазоне от {start} до {end}: {prime_numbers_count}")
-        
     except ValueError:
         print("Ошибка: введите целые числа.")
 
